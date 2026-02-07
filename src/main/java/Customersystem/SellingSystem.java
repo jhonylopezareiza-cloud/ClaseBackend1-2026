@@ -13,6 +13,11 @@ public class SellingSystem {
     static int quantity;
     static boolean state;
 
+    //Customers Atributes
+
+    static String customerName;
+    static int customerPhone;
+
     public static void main(String[] args) {
    createProducts();
    getProducts();
@@ -21,8 +26,11 @@ public class SellingSystem {
    sc.nextLine();
    updateProducts(id);
      System.out.println("Ingrese el id del producto a eliminar: ");
-     int idDelete = sc.nextInt();
-  deleteProduct(idDelete);
+      id = sc.nextInt();
+  deleteProduct(id);
+  createCustomer();
+
+
     }
 
     //Class Methods
@@ -87,4 +95,17 @@ public class SellingSystem {
       System.out.println("Id no encontrado.");
      }
  }
+
+ public static void createCustomer(){
+     System.out.println("Ingrese el nombre del cliente: ");
+     customerName = sc.nextLine();
+     sc.nextLine();
+
+     System.out.println("Ingrese el teléfono del cliente");
+     customerPhone = sc.nextInt();
+     sc.nextLine();
+
+ }
+
+
 }
